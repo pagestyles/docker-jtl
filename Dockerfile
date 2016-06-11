@@ -9,7 +9,7 @@ RUN 	chmod -R 755 /etc/service
 
 ADD 	ioncube_loader.so.tar.bz2 /
 
-RUN   mkdir /run/mysqld
+RUN   mkdir /run/mysqld && chmod -R 777 /run/mysqld
 RUN 	a2enmod rewrite
 
 EXPOSE 	80
