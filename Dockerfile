@@ -7,7 +7,7 @@ RUN   apt install -y libapache2-mod-php apache2-utils mariadb-server php-curl ph
 COPY 	etc /etc
 RUN 	chmod -R 755 /etc/service
 
-ADD 	ioncube_loader_lin_5.6.so.tar.bz2 /
+ADD 	ioncube_loader.so.tar.bz2 /
 
 RUN   mkdir /run/mysqld
 RUN 	a2enmod rewrite
