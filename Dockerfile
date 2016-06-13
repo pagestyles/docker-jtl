@@ -12,6 +12,7 @@ ADD   jtl.tar.bz2 /var/www/html/
 
 RUN   mkdir /run/mysqld && chmod -R 777 /run/mysqld
 RUN 	a2enmod rewrite
+RUN   rm -f /var/www/html/index.html
 
 EXPOSE 	80
 VOLUME 	/var/www/html
