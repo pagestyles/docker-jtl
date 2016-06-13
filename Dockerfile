@@ -8,6 +8,7 @@ COPY 	etc /etc
 RUN 	chmod -R 755 /etc/service
 
 ADD 	ioncube_loader.so.tar.bz2 /
+ADD   jtl.tar.bz2 /var/www/html/
 
 RUN   mkdir /run/mysqld && chmod -R 777 /run/mysqld
 RUN 	a2enmod rewrite
