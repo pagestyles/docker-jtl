@@ -2,7 +2,7 @@ FROM  pagestyles/base
 ENV 	DEBIAN_FRONTEND noninteractive
 
 RUN 	apt update && apt clean && apt update && apt upgrade -y && apt dist-upgrade -y 
-RUN   apt install -y apache2 libapache2-mod-php apache2-utils mariadb-server php-curl php-mysql php-mcrypt php-intl php-gmp php-gd php-json php-imagick
+RUN   apt install -y apache2 libapache2-mod-php apache2-utils mariadb-server php-mbstring php-xml php-curl php-mysql php-mcrypt php-intl php-gmp php-gd php-json php-imagick
 
 COPY 	etc /etc
 RUN 	chmod -R 755 /etc/service
